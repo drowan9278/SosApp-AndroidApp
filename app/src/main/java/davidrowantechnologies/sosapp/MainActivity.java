@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
             ((myProperties) this.getApplication()).setxCord(lastLocal.getLatitude());
             ((myProperties) this.getApplication()).setyCord(lastLocal.getLongitude());
         }
-        if(((myProperties) this.getApplication()).isSearching()) {
+        if(startSearchBool) {
             //I am very unsure about this line
             //Specifically the last argument, and whether this should be called from a seperate method
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, request, (LocationListener) this);
