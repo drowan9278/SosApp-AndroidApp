@@ -14,9 +14,7 @@ public class myProperties extends Application {
         return yCord;
     }
 
-    public void setyCord(double yCord) {
-        this.yCord = yCord;
-    }
+    public void setyCord(double yCord) { this.yCord = yCord; }
 
     public double getxCord() {
         return xCord;

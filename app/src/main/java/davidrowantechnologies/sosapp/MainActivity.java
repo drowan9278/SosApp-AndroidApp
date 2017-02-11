@@ -1,5 +1,6 @@
 package davidrowantechnologies.sosapp;
 
+import android.app.Application;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.annotation.NonNull;
@@ -10,10 +11,13 @@ import android.os.Bundle;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
-
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class MainActivity extends AppCompatActivity implements ConnectionCallbacks, OnConnectionFailedListener {
     //GoogleAPIClient needed for location and networking
     GoogleApiClient mGoogleApiClient;
     Location lastLocal;
@@ -57,14 +61,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             return;
         }
         lastLocal = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if(lastLocal != null) {
+            ((myProperties)this.getApplication()).setxCord(lastLocal.getLatitude());
+            ((myProperties)this.getApplication()).setyCord(lastLocal.getLongitude());
+        }
     }
 
     @Override
     public void onConnectionSuspended(int i) {
 
     }
-
-
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
