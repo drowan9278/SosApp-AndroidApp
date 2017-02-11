@@ -1,8 +1,13 @@
 package davidrowantechnologies.sosapp;
 
-/**
- * Created by inspi on 2/10/2017.
- */
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-public class SendMessage {
+public class SendMessage extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_send_message);
+    }
 }
