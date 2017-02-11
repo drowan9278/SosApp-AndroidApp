@@ -14,83 +14,128 @@
         android:text="Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/DTButton" />
-
-    <Button
-        android:text="Submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/ClothButton"
-        android:layout_alignBaseline="@+id/editText2"
-        android:layout_alignBottom="@+id/editText2"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
 
     <TextView
-        android:text="Send Message"
+        android:text="Your Name:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/cast_expanded_controller_background_color"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="datetime"
         android:ems="10"
-        android:id="@+id/editText"
-        android:text="Date and Time"
+        android:id="@+id/dateTimeInput"
+        android:textSize="18sp"
+        android:hint="Ex. 11/23/2018"
+        android:inputType="datetime"
+        android:background="@color/wallet_dim_foreground_disabled_holo_dark"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/clothesInput"
+        android:textSize="18sp"
+        android:hint="Ex. A red hoodie"
+        android:inputType="textShortMessage"
+        android:backgroundTint="@color/place_autocomplete_prediction_primary_text_highlight"
+        android:background="@color/wallet_dim_foreground_disabled_holo_dark"
+        android:layout_below="@+id/wearingText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="What are you wearing?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wearingText"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_below="@+id/dateTimeInput"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:text="Local Landmarks?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clothesInput"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/textView12"
+        android:textColor="@color/cast_expanded_controller_background_color" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="22dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="text|textPersonName"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:text="What are you wearing?"
-        android:layout_below="@+id/DTButton"
-        android:layout_alignStart="@+id/editText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Nearby Landmarks"
-        android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/ClothButton"
-        android:layout_alignStart="@+id/editText2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="What is your emergency?"
-        android:ems="10"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
-
-    <Button
-        android:text="Submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/LandmarkButton"
-        android:layout_below="@+id/ClothButton"
+        android:id="@+id/nameInput"
+        android:textSize="18sp"
+        android:background="@color/wallet_dim_foreground_disabled_holo_dark"
+        android:hint="ex. John Smith"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:text="Submit"
+    <TextView
+        android:text="Date and Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ReasonButton"
-        android:layout_below="@+id/LandmarkButton"
+        android:id="@+id/textView9"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/nameInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/LansdmarksInput"
+        android:textSize="18sp"
+        android:hint="Ex. A Rock, A waterfall"
+        android:inputType="textShortMessage"
+        android:background="@color/wallet_dim_foreground_disabled_holo_dark"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="What were you doing?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/LansdmarksInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:ems="10"
+        android:id="@+id/emerInput"
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:hint="ex. I was walking along route 63 and fell down the side of the road."
+        android:singleLine="false"
+      android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/place_autocomplete_search_hint"
+        android:background="@color/cast_intro_overlay_button_background_color"
+        android:drawableBottom="@color/colorAccent"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>
