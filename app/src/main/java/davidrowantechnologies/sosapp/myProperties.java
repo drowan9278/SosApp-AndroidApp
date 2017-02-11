@@ -9,6 +9,7 @@ import java.util.Stack;
 public class myProperties extends Application {
     private double xCord=0;
     private double yCord=0;
+    public Stack<messageObject> messageList = new Stack<messageObject>();
     private double interval=20000;
     private double FastestInterval=5000;
     private boolean searching = false;
