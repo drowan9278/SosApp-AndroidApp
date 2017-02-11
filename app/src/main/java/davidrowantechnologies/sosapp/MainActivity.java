@@ -82,4 +82,12 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         // Called when there was an error connecting
         // the client to the service.
     }
+
+    protected void createLocationRequest() {
+        LocationRequest request = new LocationRequest();
+        request.setInterval(10000);
+        request.setFastestInterval(5000);
+        request.setPriority(request.PRIORITY_HIGH_ACCURACY);
+
+    }
 }
