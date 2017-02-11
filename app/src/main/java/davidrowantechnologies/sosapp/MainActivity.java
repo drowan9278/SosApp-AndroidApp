@@ -61,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
                     startSearch.setBackgroundColor(Color.GREEN);
                     startSearch.setText("Start Searching");
                     startSearch.setTextColor(Color.BLUE);
+
+                    GPSTracker gps = new GPSTracker(MainActivity.this);
+                    if(gps.canGetLocation()) {
+                    }
+
                 }
             }
         });
