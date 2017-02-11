@@ -62,45 +62,6 @@
         android:text="0"
         android:layout_alignStart="@+id/cellStrengthMain" />
 
-    <TextView
-        android:text="0.0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView6"
-        android:id="@+id/xCord"
-        android:layout_alignStart="@+id/cellStrengthMain"
-        android:layout_alignEnd="@+id/Ycord" />
-
-    <TextView
-        android:text="0.0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Ycord"
-        android:layout_below="@+id/xCord"
-        android:layout_alignStart="@+id/cellStrengthMain"
-        android:layout_alignEnd="@+id/cellStrengthMain" />
-
-    <TextView
-        android:text="Current Cell Stength: "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textColor="?attr/actionMenuTextColor"
-        android:layout_alignTop="@+id/cellStrengthMain"
-        android:layout_alignEnd="@+id/welcome" />
-
-    <Button
-        android:text="Add A Messge to be sent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:id="@+id/msgSent"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@color/colorPrimary"
-        android:layout_below="@+id/startSearch"
-        android:layout_alignEnd="@+id/xCord"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Find me on Map"
         android:layout_width="wrap_content"
@@ -113,33 +74,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="23dp"
         android:layout_alignEnd="@+id/msgSent" />
-
-    <TextView
-        android:text="Last Y-Coordinate: "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/textView3"
-        android:layout_toStartOf="@+id/cellStrengthMain" />
-
-    <TextView
-        android:text="Last X-Coordinate:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/textView7"
-        android:layout_alignStart="@+id/textView7" />
-
-    <TextView
-        android:text="Current Messages Sent Out:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/textView6" />
 
     <Button
         android:text="Settings"
@@ -162,6 +96,70 @@
         android:background="@android:color/holo_orange_dark"
         android:layout_marginTop="31dp"
         android:layout_below="@+id/findMap"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xCord"
+        android:layout_above="@+id/textView7"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:text="Current Cell Stength: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="?attr/actionMenuTextColor"
+        android:layout_alignTop="@+id/cellStrengthMain"
+        android:layout_alignEnd="@+id/welcome" />
+
+    <TextView
+        android:text="Last Y-Coordinate: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/setBut"
+        android:layout_alignStart="@+id/welcome" />
+
+    <TextView
+        android:text="Last X-Coordinate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/textView7"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ycord"
+        android:layout_below="@+id/xCord"
+        android:layout_toEndOf="@+id/textView7" />
+
+    <TextView
+        android:text="Current Messages Sent Out:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/cellStrengthMain" />
+
+    <Button
+        android:text="Add A Messge to be sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/msgSent"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/startSearch"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 

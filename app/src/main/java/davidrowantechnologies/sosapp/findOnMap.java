@@ -37,6 +37,10 @@ public class findOnMap extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mMap.setMaxZoomPreference(30);
+
+        mMap.setMinZoomPreference(12);
         GPSTracker gps = new GPSTracker(findOnMap.this);
         if(gps.canGetLocation()) {
             ((myProperties) findOnMap.this.getApplication()).setxCord(gps.getLatitude());
@@ -47,4 +51,5 @@ public class findOnMap extends FragmentActivity implements OnMapReadyCallback {
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
+
 }
