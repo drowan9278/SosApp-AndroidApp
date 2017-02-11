@@ -44,8 +44,11 @@ public class SendMessage extends AppCompatActivity {
     }
 
     protected void sendSMSMessage() {
-        phoneNum = "2676647452";
-        message = "hey";
+        phoneNum = "7242617370";
+        messageObject messObj = ((myProperties) this.getApplication()).messageList.pop();
+
+
+        message = "****EMS****\n" + messObj.getName() + "  \nWearing: "+ messObj.getClothes() + " \nLandmarks: " + messObj.getLandmarks() + " \nDate: " + messObj.getDate() + " \nCoordinates: " + ((myProperties) this.getApplication()).getxCord() + " "  + ((myProperties) this.getApplication()).getyCord() + " \nI was Doing " + messObj.getEmerInfo();
 
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.SEND_SMS)
