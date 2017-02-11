@@ -37,9 +37,13 @@ public class findOnMap extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        GPSTracker gps = new GPSTracker(findOnMap.this);
+        if(gps.canGetLocation()) {
+            ((myProperties) findOnMap.this.getApplication()).setxCord(gps.getLatitude());
+            ((myProperties) findOnMap.this.getApplication()).setyCord(gps.getLongitude());
+        }
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        LatLng sydney = new LatLng(((myProperties) findOnMap.this.getApplication()).getxCord(), ((myProperties) findOnMap.this.getApplication()).getyCord());
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
