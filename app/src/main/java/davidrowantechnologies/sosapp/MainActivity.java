@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API).build();
         }
+        Button sendMessage = (Button) findViewById(R.id.msgSent);
+        Button findMap = (Button) findViewById(R.id.findMap);
+        Button settings = (Button) findViewById(R.id.setBut);
+        Button guidelines = (Button) findViewById(R.id.guideBut);
+        Button startSearch = (Button) findViewById(R.id.startSearch);
 
     }
     

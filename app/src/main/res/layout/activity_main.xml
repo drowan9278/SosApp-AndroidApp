@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="davidrowantechnologies.sosapp.MainActivity">
+    tools:context="davidrowantechnologies.sosapp.MainActivity"
+    android:background="@color/wallet_highlighted_text_holo_light">
 
     <TextView
         android:text="Welcome to SOSapp"
@@ -19,9 +20,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="24sp"
-        android:typeface="sans"
+        android:typeface="normal"
         android:lineSpacingExtra="8sp"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="serif-monospace" />
 
     <Button
         android:text="Start Searching"
@@ -30,38 +32,12 @@
         android:layout_below="@+id/welcome"
         android:layout_alignParentStart="true"
         android:layout_marginTop="24dp"
-        android:id="@+id/button"
+        android:id="@+id/startSearch"
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorPrimary"
         android:background="@android:color/holo_orange_dark"
         android:elevation="24dp"
         style="@style/Widget.AppCompat.Button" />
-
-    <Button
-        android:text="Settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="43dp"
-        android:id="@+id/button3"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/colorPrimaryDark"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:elevation="24dp" />
-
-    <Button
-        android:text="Guidelines"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
-        android:layout_marginTop="42dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/holo_green_light"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:elevation="24dp" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -74,7 +50,10 @@
         android:layout_marginBottom="32dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/textView3"
-        android:layout_marginStart="14dp" />
+        android:layout_marginStart="14dp"
+        android:backgroundTint="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:progressTint="@android:color/holo_green_light" />
 
     <TextView
         android:text="Current Messages Sent Out:"
@@ -140,16 +119,53 @@
         android:layout_alignEnd="@+id/welcome" />
 
     <Button
+        android:text="Add A Messge to be sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/msgSent"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/startSearch"
+        android:layout_alignEnd="@+id/xCord"
+        android:layout_alignParentStart="true" />
+
+    <Button
         android:text="Find me on Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginTop="49dp"
+        android:id="@+id/findMap"
         android:textColor="@color/colorPrimary"
         android:background="@android:color/holo_orange_dark"
-        android:layout_below="@+id/button"
+        android:elevation="24dp"
+        android:layout_below="@+id/msgSent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:elevation="24dp" />
+        android:layout_marginTop="23dp"
+        android:layout_alignEnd="@+id/msgSent" />
+
+    <Button
+        android:text="Guidelines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideBut"
+        android:textColor="@android:color/holo_green_light"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:elevation="24dp"
+        android:layout_below="@+id/setBut"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/setBut" />
+
+    <Button
+        android:text="Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/setBut"
+        android:textColor="@color/colorPrimaryDark"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:elevation="24dp"
+        android:layout_below="@+id/findMap"
+        android:layout_alignEnd="@+id/findMap"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
