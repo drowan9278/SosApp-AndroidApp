@@ -9,7 +9,7 @@ import java.util.Stack;
 public class myProperties extends Application {
     private double xCord=0;
     private double yCord=0;
-    Stack<Messages> messageList = new Stack<Messages>();
+    public Stack<messageObject> messageList = new Stack<messageObject>();
     public double getyCord() {
         return yCord;
     }

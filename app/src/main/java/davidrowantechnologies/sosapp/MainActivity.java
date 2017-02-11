@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         }
 
     }
-
+    
     protected void onStart() {
         mGoogleApiClient.connect();
         super.onStart();
