@@ -60,13 +60,15 @@ public class MainActivity extends AppCompatActivity {
         guidelines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, Guidelines.class);
+                startActivity(intent);
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this,Settings.class);
+                startActivity(intent);
             }
         });
         startSearch.setOnClickListener(new View.OnClickListener() {
