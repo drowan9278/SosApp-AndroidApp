@@ -10,13 +10,10 @@ import android.os.Bundle;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.location.LocationListener;
-import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
-public class MainActivity extends AppCompatActivity implements ConnectionCallbacks, OnConnectionFailedListener {
+
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     //GoogleAPIClient needed for location and networking
     GoogleApiClient mGoogleApiClient;
     Location lastLocal;
@@ -65,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     public void onConnectionSuspended(int i) {
 
     }
+
+
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
