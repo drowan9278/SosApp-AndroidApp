@@ -12,6 +12,8 @@ public class myProperties extends Application {
     public Stack<messageObject> messageList = new Stack<messageObject>();
     private double interval=20000;
     private double FastestInterval=5000;
+    public boolean vibrate;
+    public boolean noise;
 
     public double getyCord() {
         return yCord;
@@ -34,5 +36,14 @@ public class myProperties extends Application {
     public double getFastestInterval() { return FastestInterval; }
 
     public void setFastestInterval(double FastestInterval) { this.FastestInterval = FastestInterval; }
+
+    public boolean getVibrate() {return vibrate;}
+
+    public void setVibrate(boolean vibrate) {this.vibrate=vibrate;}
+
+    public boolean getNoise() {return noise;}
+
+    public void setNoise(boolean noise) {this.noise=noise;}
+
 
 }
