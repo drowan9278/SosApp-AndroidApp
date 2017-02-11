@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
                         // \n is for new line
                         Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
-                        
+
                     }
 
                 }
