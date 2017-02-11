@@ -68,11 +68,17 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
 
     @Override
     public void onConnectionSuspended(int i) {
-
+        // TODO: Handle disconnections
+        // GoogleApiClient will automatically attempt to
+        // restore the connection. Applications should disable
+        // UI components that require the service, and wait for
+        // a call to onConnected(Bundle) to re-enable them.
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
+        // TODO: Handle failed connections
+        // Called when there was an error connecting
+        // the client to the service.
     }
 }

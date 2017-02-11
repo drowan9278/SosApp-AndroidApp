@@ -6,4 +6,5 @@ package davidrowantechnologies.sosapp;
  */
 
 public class DataGrabber {
+
 }
