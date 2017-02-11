@@ -1,7 +1,10 @@
 package davidrowantechnologies.sosapp;
 
+import android.app.Application;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.CellSignalStrength;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    public void grabCellStatus(){
+        double cellProgess = 0;
+        double x = ((myProperties)this.getApplication()).getxCord();
+
     }
 }
