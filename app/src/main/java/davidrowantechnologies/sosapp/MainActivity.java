@@ -76,12 +76,11 @@ public class MainActivity extends AppCompatActivity {
                     startSearch.setTextColor(Color.BLACK);
                     GPSTracker gps = new GPSTracker(MainActivity.this);
                     if(gps.canGetLocation()) {
-                        double latitude = gps.getLatitude();
-                        double longitude = gps.getLongitude();
+                        ((myProperties) MainActivity.this.getApplication()).setxCord(gps.getLatitude());
+                        ((myProperties) MainActivity.this.getApplication()).setyCord(gps.getLongitude());
 
-                        // \n is for new line
-                        Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
-                        
+                        Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + ((myProperties) MainActivity.this.getApplication()).getxCord() + "\nLong: " + ((myProperties) MainActivity.this.getApplication()).getyCord(), Toast.LENGTH_LONG).show();
+
                     }
 
                 }
