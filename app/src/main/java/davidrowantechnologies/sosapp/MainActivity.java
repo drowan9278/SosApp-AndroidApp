@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     //GoogleAPIClient needed for location and networking
     GoogleApiClient mGoogleApiClient;
     Location lastLocal;
+    LocationRequest request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +62,14 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
             return;
         }
         lastLocal = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if(lastLocal != null) {
-            ((myProperties)this.getApplication()).setxCord(lastLocal.getLatitude());
-            ((myProperties)this.getApplication()).setyCord(lastLocal.getLongitude());
+        if (lastLocal != null) {
+            ((myProperties) this.getApplication()).setxCord(lastLocal.getLatitude());
+            ((myProperties) this.getApplication()).setyCord(lastLocal.getLongitude());
+        }
+        if(((myProperties) this.getApplication()).isSearching()) {
+            //I am very unsure about this line
+            //Specifically the last argument, and whether this should be called from a seperate method
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, request, (LocationListener) this);
         }
     }
 
@@ -83,11 +89,11 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         // the client to the service.
     }
 
+    //May have to tinker with these settings
     protected void createLocationRequest() {
-        LocationRequest request = new LocationRequest();
-        request.setInterval(10000);
+        request = new LocationRequest();
+        request.setInterval(20000);
         request.setFastestInterval(5000);
         request.setPriority(request.PRIORITY_HIGH_ACCURACY);
-
     }
 }
