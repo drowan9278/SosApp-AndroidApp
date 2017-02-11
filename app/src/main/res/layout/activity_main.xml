@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/welcome"
-        android:contentDescription="Welcome message"
+
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="24sp"
@@ -36,7 +36,7 @@
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorPrimary"
         android:background="@android:color/holo_orange_dark"
-        android:elevation="24dp"
+
         style="@style/Widget.AppCompat.Button" />
 
     <ProgressBar
@@ -51,18 +51,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/textView3"
         android:layout_marginStart="14dp"
-        android:backgroundTint="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
-        android:progressBackgroundTint="@color/colorPrimary"
-        android:progressTint="@android:color/holo_green_light" />
-
-    <TextView
-        android:text="Current Messages Sent Out:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/textView3"
-        android:textColor="@android:color/background_dark" />
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,24 +61,6 @@
         android:id="@+id/msgAmount"
         android:text="0"
         android:layout_alignStart="@+id/cellStrengthMain" />
-
-    <TextView
-        android:text="Last Y-Coordinate:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
-
-    <TextView
-        android:text="Last X-Coordinate:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/textView7"
-        android:layout_alignStart="@+id/textView7" />
 
     <TextView
         android:text="0.0"
@@ -137,11 +108,49 @@
         android:id="@+id/findMap"
         android:textColor="@color/colorPrimary"
         android:background="@android:color/holo_orange_dark"
-        android:elevation="24dp"
+
         android:layout_below="@+id/msgSent"
         android:layout_alignParentStart="true"
         android:layout_marginTop="23dp"
         android:layout_alignEnd="@+id/msgSent" />
+
+    <TextView
+        android:text="Last Y-Coordinate: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/textView3"
+        android:layout_toStartOf="@+id/cellStrengthMain" />
+
+    <TextView
+        android:text="Last X-Coordinate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:text="Current Messages Sent Out:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <Button
+        android:text="Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setBut"
+        android:textColor="@color/colorPrimaryDark"
+
+        android:background="@android:color/holo_orange_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Guidelines"
@@ -149,23 +158,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/guideBut"
         android:textColor="@android:color/holo_green_light"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:elevation="24dp"
-        android:layout_below="@+id/setBut"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/setBut" />
 
-    <Button
-        android:text="Settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:id="@+id/setBut"
-        android:textColor="@color/colorPrimaryDark"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:elevation="24dp"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_marginTop="31dp"
         android:layout_below="@+id/findMap"
-        android:layout_alignEnd="@+id/findMap"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
