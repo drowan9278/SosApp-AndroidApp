@@ -35,7 +35,7 @@ public class SendMessage extends AppCompatActivity {
                 message.setLandmarks(landmark.getText().toString());
                 message.setEmerInfo(emerInfo.getText().toString());
                 message.setDate(date.getText().toString());
-                Toast.makeText(SendMessage.this, "Your message has been added, it will be sent!", Toast.LENGTH_LONG).show();
+                //Toast.makeText(SendMessage.this, "Your message has been added, it will be sent!", Toast.LENGTH_LONG).show();
                 sendSMSMessage();
                 finish();
             }
@@ -68,6 +68,7 @@ public class SendMessage extends AppCompatActivity {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     SmsManager smsManager = SmsManager.getDefault();
+
                     smsManager.sendTextMessage(phoneNum, null, message, null, null);
                     Toast.makeText(getApplicationContext(), "SMS sent.",
                             Toast.LENGTH_LONG).show();
