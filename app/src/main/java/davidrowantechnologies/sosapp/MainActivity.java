@@ -89,8 +89,6 @@ public class MainActivity extends AppCompatActivity {
                     startSearch.setText("Start Searching");
                     startSearch.setTextColor(Color.BLUE);
 
-
-
                 }
             }
         });

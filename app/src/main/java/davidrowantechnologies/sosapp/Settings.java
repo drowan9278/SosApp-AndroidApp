@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
-        int interval=0;
+        final int interval=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         Button vibrate = (Button) findViewById(R.id.vibrateBut);
@@ -20,7 +20,7 @@ public class Settings extends AppCompatActivity {
             public void onClick(View v) {
                 String temp;
                 temp=intervalTime.getText().toString();
-                interval=Integer.parseInt(temp);
+                //interval=Integer.parseInt(temp);
 
             }
         });
