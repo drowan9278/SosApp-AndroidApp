@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     boolean startSearchBool= false;
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
                     GPSTracker gps = new GPSTracker(MainActivity.this);
                     if(gps.canGetLocation()) {
+                        double latitude = gps.getLatitude();
+                        double longitude = gps.getLongitude();
+
+                        // \n is for new line
+                        Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
                     }
 
                 }
