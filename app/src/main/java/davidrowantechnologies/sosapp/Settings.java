@@ -20,7 +20,7 @@ public class Settings extends AppCompatActivity {
             public void onClick(View v) {
                 String temp;
                 temp=intervalTime.getText().toString();
-                interval=Integer.parseInt(temp);
+                //interval=Integer.parseInt(temp);
 
             }
         });
