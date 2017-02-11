@@ -47,7 +47,11 @@ public class SendMessage extends AppCompatActivity {
         phoneNum = "7242617370";
         messageObject messObj = ((myProperties) this.getApplication()).messageList.pop();
 
-
+        GPSTracker gps = new GPSTracker(SendMessage.this);
+        if(gps.canGetLocation()) {
+            ((myProperties) SendMessage.this.getApplication()).setxCord(gps.getLatitude());
+            ((myProperties) SendMessage.this.getApplication()).setyCord(gps.getLongitude());
+        }
         message = "****EMS****\n" + messObj.getName() + "  \nWearing: "+ messObj.getClothes() + " \nLandmarks: " + messObj.getLandmarks() + " \nDate: " + messObj.getDate() + " \nCoordinates: " + ((myProperties) this.getApplication()).getxCord() + " "  + ((myProperties) this.getApplication()).getyCord() + " \nI was Doing " + messObj.getEmerInfo();
 
         if (ContextCompat.checkSelfPermission(this,
