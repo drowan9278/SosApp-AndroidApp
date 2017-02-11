@@ -31,17 +31,11 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="24dp"
         android:id="@+id/button"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Find me on Map"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="49dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/holo_orange_dark"
+        android:elevation="24dp"
+        style="@style/Widget.AppCompat.Button" />
 
     <Button
         android:text="Settings"
@@ -51,7 +45,10 @@
         android:layout_marginTop="43dp"
         android:id="@+id/button3"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:elevation="24dp" />
 
     <Button
         android:text="Guidelines"
@@ -61,5 +58,98 @@
         android:layout_below="@+id/button3"
         android:layout_marginTop="42dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_green_light"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:elevation="24dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cellStrengthMain"
+        android:progress="50"
+        android:max="100"
+        android:visibility="visible"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:text="Current Messages Sent Out:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView3"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/msgAmount"
+        android:text="0"
+        android:layout_alignStart="@+id/cellStrengthMain" />
+
+    <TextView
+        android:text="Last Y-Coordinate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:text="Last X-Coordinate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView6"
+        android:id="@+id/xCord"
+        android:layout_alignStart="@+id/cellStrengthMain"
+        android:layout_alignEnd="@+id/Ycord" />
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ycord"
+        android:layout_below="@+id/xCord"
+        android:layout_alignStart="@+id/cellStrengthMain"
+        android:layout_alignEnd="@+id/cellStrengthMain" />
+
+    <TextView
+        android:text="Current Cell Stength: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="?attr/actionMenuTextColor"
+        android:layout_alignTop="@+id/cellStrengthMain"
+        android:layout_alignEnd="@+id/welcome" />
+
+    <Button
+        android:text="Find me on Map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginTop="49dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="24dp" />
+
 </RelativeLayout>
