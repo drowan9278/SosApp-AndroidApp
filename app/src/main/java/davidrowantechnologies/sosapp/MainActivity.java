@@ -1,13 +1,16 @@
 package davidrowantechnologies.sosapp;
 
 import android.app.Application;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     //GoogleAPIClient needed for location and networking
     GoogleApiClient mGoogleApiClient;
     Location lastLocal;
+    boolean startSearchBool= false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +40,55 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API).build();
         }
-        Button sendMessage = (Button) findViewById(R.id.msgSent);
-        Button findMap = (Button) findViewById(R.id.findMap);
-        Button settings = (Button) findViewById(R.id.setBut);
-        Button guidelines = (Button) findViewById(R.id.guideBut);
-        Button startSearch = (Button) findViewById(R.id.startSearch);
+        Button sendMessage = (Button) findViewById(R.id.msgSent); // Takes to send message activity
+        Button findMap = (Button) findViewById(R.id.findMap); //needs activity
+        Button settings = (Button) findViewById(R.id.setBut); //needs activity
+        Button guidelines = (Button) findViewById(R.id.guideBut); // needs activity
+        final Button startSearch = (Button) findViewById(R.id.startSearch); //a button that should turn colors when clicked
+        sendMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SendMessage.class);
+                startActivity(intent);
+            }
+        });
+
+        findMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        guidelines.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        startSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startSearchBool = !startSearchBool;
+                if(startSearchBool){
+                    startSearch.setBackgroundColor(Color.RED);
+                    startSearch.setText("Stop Searching");
+                    startSearch.setTextColor(Color.BLACK);
+                }
+                else{
+                    startSearch.setBackgroundColor(Color.GREEN);
+                    startSearch.setText("Start Searching");
+                    startSearch.setTextColor(Color.BLUE);
+                }
+
+            }
+        });
 
     }
     
